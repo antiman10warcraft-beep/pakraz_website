@@ -1,0 +1,144 @@
+/*
+  PAK RAZ ESPADANA SHOP — V17.4 night-mode refinement.
+  Day-mode palette and layout inherit unchanged from V17.2.
+  Dark mode removes the legacy electric-blue hero and green-heavy surfaces.
+*/
+
+/* Day-mode exception: keep the familiar blue hero, but soften its brightest peak only. */
+html:not([data-theme="dark"]) .hero{
+  background:
+    radial-gradient(ellipse at 12% 10%,#31586c 0,transparent 42%),
+    linear-gradient(120deg,#10243a 0%,#183c55 56%,#285269 100%)
+}
+html:not([data-theme="dark"]) .v3-conversion{
+  background:linear-gradient(116deg,#142e43 0%,#244a5e 100%)
+}
+
+html[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#151f27;--card:#202b33;--ink:#e8eceb;--muted:#b4bec1;--line:#3b4951;
+  --deep:#283b47;--deep-2:#3a505b;--green:#a9b7b0;--green-strong:#c7d2cc;
+  --sage:#53635f;--sage2:#29353d;--amber:#d5b985;--amber-ink:#24323a;
+  --paper:#1b252d;--focus:#b9c8c1;--focus-soft:rgba(185,200,193,.17);
+  --shadow:0 18px 46px rgba(0,0,0,.25);
+  --danger:#e19a92;--ok:#a9c2b0;
+}
+html[data-theme="dark"]{background:var(--bg);color:var(--ink);scrollbar-color:#687780 var(--card)}
+html[data-theme="dark"] body{background:var(--bg);color:var(--ink)}
+html[data-theme="dark"] ::selection{background:#53636b;color:#f6f5f0}
+html[data-theme="dark"] .topbar{background:#182630;color:#cbd4d6}
+html[data-theme="dark"] .topbar a{color:#e1e6e4}
+html[data-theme="dark"] .header,html[data-theme="dark"] .nav{
+  background:rgba(31,43,51,.97);border-color:var(--line);box-shadow:0 6px 22px rgba(0,0,0,.20)
+}
+html[data-theme="dark"] .logo b{color:var(--ink)}
+html[data-theme="dark"] .logo small,html[data-theme="dark"] .nav a{color:var(--muted)}
+html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .nav a.active{
+  background:#303d45;color:#f1f3f0
+}
+html[data-theme="dark"] .v3-header-search,html[data-theme="dark"] .v3-main-search{
+  background:#1b2730;border-color:#44535b
+}
+html[data-theme="dark"] .v3-header-search input,html[data-theme="dark"] .v3-main-search input{color:var(--ink)}
+html[data-theme="dark"] .v3-header-search button,html[data-theme="dark"] .v3-main-search button{
+  background:#344a56;color:#f6f6f2;border-color:#344a56
+}
+html[data-theme="dark"] .iconbtn{background:#26343d;color:var(--ink);border-color:#46545c}
+html[data-theme="dark"] .iconbtn:hover{background:#303f48;border-color:#68777d}
+html[data-theme="dark"] .cartbtn{background:var(--amber);color:var(--amber-ink);border-color:var(--amber)}
+html[data-theme="dark"] .cartbtn .badge{background:#283b47;color:#f2f4f1}
+html[data-theme="dark"] .btn-primary{background:#344a56;color:#f4f5f2;border-color:#344a56}
+html[data-theme="dark"] .btn-primary:hover{background:#405965;color:#fff;border-color:#405965}
+html[data-theme="dark"] .btn-amber{background:#d5b985;color:#24323a;border-color:#d5b985}
+html[data-theme="dark"] .btn-amber:hover{background:#e0c99b;color:#1f2c33;border-color:#e0c99b}
+html[data-theme="dark"] .btn-ghost{background:rgba(255,255,255,.035);color:#e7ecea;border-color:#647179}
+html[data-theme="dark"] .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:#a2afb0}
+/* The former dark hero contained a bright blue (#1b5687 → #155b91) stop.
+   It now follows the corporate graphite/petrol family with a continuous gradient. */
+html[data-theme="dark"] .hero,html[data-theme="dark"] .v3-hero{
+  background:
+    radial-gradient(ellipse at 13% 12%,rgba(143,158,163,.13),transparent 39%),
+    linear-gradient(116deg,#18252e 0%,#202f39 56%,#2a3b44 100%);
+  color:#eef0ed
+}
+html[data-theme="dark"] .hero:before,html[data-theme="dark"] .v3-hero:before{opacity:.045;filter:saturate(.35) brightness(.8)}
+html[data-theme="dark"] .hero h1,html[data-theme="dark"] .v3-hero h1{color:#f0f2ef}
+html[data-theme="dark"] .hero h1 em,html[data-theme="dark"] .v3-hero h1 em{color:#dfcda8}
+html[data-theme="dark"] .hero p.lead,html[data-theme="dark"] .v3-hero p.lead{color:#c5cfd1}
+html[data-theme="dark"] .hero .eyebrow,html[data-theme="dark"] .v3-hero .eyebrow{color:#d7c49d}
+html[data-theme="dark"] .hero .btn-ghost,html[data-theme="dark"] .v3-hero .btn-ghost{
+  color:#edf0ed;background:rgba(255,255,255,.055);border-color:rgba(226,233,231,.44)
+}
+html[data-theme="dark"] .heroart .tile,html[data-theme="dark"] .v3-float-card{
+  background:rgba(37,50,58,.94);border-color:rgba(203,215,214,.30);
+  color:#e9edeb;box-shadow:0 14px 32px rgba(0,0,0,.22);backdrop-filter:blur(10px)
+}
+html[data-theme="dark"] .heroart .tile b,html[data-theme="dark"] .v3-float-card b{color:#eef1ed}
+html[data-theme="dark"] .heroart .tile small,html[data-theme="dark"] .v3-float-card small{color:#bac5c8}
+html[data-theme="dark"] .heroart .il{--a:#9aa9a9;--b:#53656b;--c:#d1b47f;--d:#273b45;--e:#e8ece8}
+html[data-theme="dark"] .v3-float-icon,html[data-theme="dark"] .v3-category-icon{
+  background:#34434a;color:#d0d8d4
+}
+html[data-theme="dark"] section.s{background:var(--bg)}
+html[data-theme="dark"] .s.alt,html[data-theme="dark"] .v3-search-band,
+html[data-theme="dark"] .pagehead{background:#202c34;border-color:var(--line)}
+html[data-theme="dark"] .pagehead h1{color:var(--ink)}
+html[data-theme="dark"] .v3-category,html[data-theme="dark"] .card,
+html[data-theme="dark"] .pcard,html[data-theme="dark"] .blk,
+html[data-theme="dark"] .summary,html[data-theme="dark"] .buybox,
+html[data-theme="dark"] .step,html[data-theme="dark"] .panel,
+html[data-theme="dark"] .item,html[data-theme="dark"] .fmt,
+html[data-theme="dark"] .toolbar{
+  background:var(--card);border-color:var(--line);color:var(--ink);
+  box-shadow:0 4px 18px rgba(0,0,0,.15)
+}
+html[data-theme="dark"] .card h2,html[data-theme="dark"] .card h3,
+html[data-theme="dark"] .pcard h3,html[data-theme="dark"] .shead h2{color:var(--ink)}
+html[data-theme="dark"] .card p,html[data-theme="dark"] .pcard p,
+html[data-theme="dark"] .shead p,html[data-theme="dark"] .hint{color:var(--muted)}
+html[data-theme="dark"] .pcard .pimg{background:linear-gradient(145deg,#2a373e,#202b33);border-color:var(--line)}
+html[data-theme="dark"] .v3-mini-heading span,html[data-theme="dark"] .v3-mini-heading>a,
+html[data-theme="dark"] .v3-category i,html[data-theme="dark"] .more,
+html[data-theme="dark"] .breadcrumb a{color:#d0dcd6}
+html[data-theme="dark"] .more:hover,html[data-theme="dark"] .breadcrumb a:hover{color:#ead6ad}
+html[data-theme="dark"] .v3-conversion{
+  background:linear-gradient(116deg,#1b2b34 0%,#243843 100%);color:#eef0ed
+}
+html[data-theme="dark"] .v3-conversion h2{color:#f0f2ef}
+html[data-theme="dark"] .v3-conversion p{color:#c3cdd0}
+html[data-theme="dark"] .v3-conversion .eyebrow{color:#d7c49d}
+html[data-theme="dark"] .honest,html[data-theme="dark"] .notice{
+  background:#2a363d;color:#c0cacc;border-color:var(--line)
+}
+html[data-theme="dark"] .honest{border-inline-start-color:var(--amber)}
+html[data-theme="dark"] .field input,html[data-theme="dark"] .field select,
+html[data-theme="dark"] .field textarea,html[data-theme="dark"] .form2 input,
+html[data-theme="dark"] .form2 select,html[data-theme="dark"] .form2 textarea,
+html[data-theme="dark"] .v3-header-search input,html[data-theme="dark"] .v3-main-search input{
+  background:#1b2730;color:var(--ink);border-color:#4a5961
+}
+html[data-theme="dark"] .field input::placeholder,html[data-theme="dark"] .field textarea::placeholder,
+html[data-theme="dark"] .form2 input::placeholder,html[data-theme="dark"] .form2 textarea::placeholder{color:#9eaaae}
+html[data-theme="dark"] .field input:focus,html[data-theme="dark"] .field select:focus,
+html[data-theme="dark"] .field textarea:focus,html[data-theme="dark"] .form2 input:focus,
+html[data-theme="dark"] .form2 select:focus,html[data-theme="dark"] .form2 textarea:focus{
+  border-color:var(--focus);box-shadow:0 0 0 4px var(--focus-soft);outline:0
+}
+html[data-theme="dark"] .tag.good{background:#303e3a;color:#cedbd4;border-color:#4b5b54}
+html[data-theme="dark"] .tag.warn{background:#3b352a;color:#e2cda5;border-color:#5b503d}
+html[data-theme="dark"] .status.ok{background:#2b3a34;color:#c6d5cd;border-color:#4a5e54}
+html[data-theme="dark"] .status.err{background:#422f30;color:#f0c5c0;border-color:#69494a}
+html[data-theme="dark"] .footer{background:#111b22;color:#c5ced0}
+html[data-theme="dark"] .footer h4,html[data-theme="dark"] .footer h2{color:#f1f2ef}
+html[data-theme="dark"] .footer a{color:#cbd5d4}
+html[data-theme="dark"] .footer a:hover{color:#ead7af}
+html[data-theme="dark"] .footer .legal{color:#aeb9bd;border-color:rgba(222,232,229,.16)}
+html[data-theme="dark"] .result{background:#263945;color:#edf0ed}
+html[data-theme="dark"] .result h3{color:#fff}
+html[data-theme="dark"] .result .rowx{border-color:rgba(235,240,237,.22)}
+html[data-theme="dark"] .theme-toggle{background:#26343d!important;color:#e8eceb!important;border-color:#46545c!important;box-shadow:0 3px 12px rgba(0,0,0,.14)!important}
+
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}

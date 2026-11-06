@@ -1,3 +1,2 @@
-# STAGING: not for search engines yet. Run go-live (see docs) when the site is ready.
 User-agent: *
-Disallow: /
+Allow: /

@@ -1,0 +1,86 @@
+/* PAK RAZ ESPADANA SHOP V17.2 — same forest/sage identity, warmer conversion accent */
+:root{
+ color-scheme:light;
+ --bg:#f4f7f2;--card:#ffffff;--ink:#183b35;--muted:#61766b;--line:#dbe5dc;
+ --deep:#103a37;--green:#527a60;--sage:#c5d8bf;--sage2:#eaf1e8;
+ --amber:#c7a66d;--amber-ink:#17362f;--shadow:0 16px 42px rgba(16,54,42,.09);--r:12px;
+ --focus:#5d8a68;--focus-soft:rgba(103,151,111,.20)
+}
+html[data-theme="dark"]{
+ color-scheme:dark;
+ --bg:#0c1917;--card:#13231f;--ink:#e4eee7;--muted:#a8bbb0;--line:#2d463b;
+ --deep:#0a2426;--green:#a6c9a8;--sage:#b7d2b0;--sage2:#1d342b;
+ --amber:#d6b77a;--amber-ink:#1a3028;--shadow:0 18px 46px rgba(0,0,0,.30);
+ --focus:#a8d2a8;--focus-soft:rgba(160,207,161,.22)
+}
+html{background:var(--bg);scroll-padding-top:110px}
+body{background:var(--bg);color:var(--ink);text-rendering:optimizeLegibility}
+.topbar{background:#0b302f;color:#dce9df}
+html[data-theme="dark"] .topbar{background:#071d20;color:#dce9df}
+.header{background:var(--card);border-color:var(--line);box-shadow:0 7px 24px rgba(20,53,42,.05)}
+.logo b{color:var(--deep)}
+html[data-theme="dark"] .logo b{color:var(--ink)}
+.logo small{color:var(--muted)}
+.nav a{color:var(--muted)}
+.nav a:hover,.nav a:focus-visible{background:var(--sage2);color:var(--green)}
+.v3-header-search{background:var(--bg);border-color:var(--line);border-radius:9px}
+.v3-header-search:focus-within,.v3-main-search:focus-within{border-color:var(--focus);box-shadow:0 0 0 4px var(--focus-soft)}
+.v3-header-search input,.v3-main-search input{color:var(--ink)}
+.v3-header-search button,.v3-main-search button{background:var(--deep);color:#f5f8f3;border-radius:7px}
+.iconbtn{background:var(--card);border-color:var(--line);color:var(--ink);border-radius:9px}
+.cartbtn{background:var(--deep);border-color:var(--deep);color:#f7faf5}
+.btn{border-radius:7px;min-height:48px}
+.btn-primary{background:var(--deep);color:#f5f8f3;border-color:var(--deep)}
+.btn-primary:hover{background:#1b5145;color:#fff}
+.btn-amber{background:var(--amber);color:var(--amber-ink);box-shadow:0 8px 20px rgba(159,123,57,.18)}
+.btn-amber:hover{background:#d7ba83;color:#16362f}
+.btn-ghost{border-color:var(--line);background:var(--card);color:var(--ink)}
+.v3-hero{background:#0d3031;color:#f3f7f1}
+.v3-hero:before{background:linear-gradient(90deg,rgba(7,31,31,.98) 0%,rgba(10,45,42,.88) 45%,rgba(9,39,39,.32) 100%),url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat}
+.v3-hero .eyebrow{color:#d4e4d2;background:rgba(255,255,255,.07);border-color:rgba(213,232,211,.24)}
+.v3-live-dot{background:#a4d0a7;box-shadow:0 0 0 5px rgba(164,208,167,.17)}
+.v3-hero h1{color:#f5f8f2}
+.v3-hero h1 em{color:#d8bd86}
+.v3-hero p.lead{color:#d4e1d7}
+.v3-hero .btn-ghost{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.44);color:#f4f7f1}
+.v3-hero-visual{border-color:rgba(215,234,213,.42);box-shadow:0 28px 70px rgba(2,24,22,.46)}
+.v3-float-card{background:rgba(248,251,244,.96);border-color:rgba(202,224,199,.75);color:#183b35}
+.v3-float-icon{background:#e5efe3;color:#416d50}
+.v3-visual-caption span{color:#ddc28e}
+.v3-search-band,.s.alt{background:var(--card);border-color:var(--line)}
+.v3-main-search,.v3-category,.card,.toolbar,.panel,.summary,.item,.fmt,.step{background:var(--card);border-color:var(--line);color:var(--ink)}
+.v3-category:hover,.card:hover{border-color:var(--green)}
+.v3-category-icon{background:var(--sage2);color:var(--green)}
+.v3-mini-heading span,.v3-mini-heading>a,.v3-category i,.more,.breadcrumb a{color:var(--green)}
+.v3-conversion{background:linear-gradient(115deg,#103a37,#1b5146);color:#f5f8f2}
+.v3-conversion p{color:#d0dfd4}
+.v3-conversion .eyebrow{color:#d9c18e}
+.footer{background:#0b302f;color:#dce9df}
+.footer a{color:#d5e5d9}
+.footer .legal{color:#a7bcb0;border-color:rgba(226,239,226,.18)}
+.honest,.notice{background:var(--sage2);border-color:var(--line);color:var(--muted)}
+.field input,.field select,.field textarea,.form2 input,.form2 select,.form2 textarea,
+.v3-header-search input,.v3-main-search input{background:transparent;color:var(--ink)}
+.field input,.field select,.field textarea,.form2 input,.form2 select,.form2 textarea{border-color:var(--line)}
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:2px solid var(--focus)!important;outline-offset:3px!important;box-shadow:0 0 0 4px var(--focus-soft)}
+.field input:focus,.field select:focus,.field textarea:focus,.form2 input:focus,.form2 select:focus,.form2 textarea:focus{border-color:var(--focus);box-shadow:0 0 0 4px var(--focus-soft);outline:0}
+html[data-theme="dark"] .header,html[data-theme="dark"] .v3-search-band,html[data-theme="dark"] .s.alt,
+html[data-theme="dark"] .v3-category,html[data-theme="dark"] .card,html[data-theme="dark"] .toolbar,
+html[data-theme="dark"] .panel,html[data-theme="dark"] .summary,html[data-theme="dark"] .item,
+html[data-theme="dark"] .fmt,html[data-theme="dark"] .step{background:var(--card);color:var(--ink);border-color:var(--line)}
+html[data-theme="dark"] .honest,html[data-theme="dark"] .notice{background:#1b3027;color:#c3d3c5;border-color:var(--line)}
+html[data-theme="dark"] .v3-header-search,html[data-theme="dark"] .v3-main-search{background:#10201c;border-color:var(--line)}
+html[data-theme="dark"] .nav{background:var(--card);border-color:var(--line)}
+html[data-theme="dark"] .v3-hero:before{filter:saturate(.82) brightness(.82)}
+html[data-theme="dark"] .footer{background:#071d20}
+html[data-theme="dark"] .v3-conversion{background:linear-gradient(115deg,#071f20,#123e36)}
+html[data-theme="dark"] .v3-float-card{background:rgba(245,249,241,.95);color:#183b35}
+@media(max-width:760px){
+ .nav a{min-height:44px;display:flex;align-items:center}
+ .iconbtn,.menubtn{min-width:42px;min-height:42px}
+ .footer a,.more,.crumbs a{min-height:28px;display:inline-flex;align-items:center;padding-block:3px}
+ .v3-search-inner{gap:16px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}

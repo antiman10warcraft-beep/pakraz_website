@@ -1,0 +1,18 @@
+/* V16.9 — cross-site finder → RFQ handoff panel */
+.finder-handoff{border:1px solid var(--line);background:var(--paper);padding:clamp(16px,2.5vw,24px);margin:0 0 18px;color:var(--ink)}
+.finder-handoff[hidden]{display:none}
+.finder-handoff h2{font-size:19px;font-weight:600;margin:0 0 8px}
+.finder-handoff p{font-size:13.5px;line-height:2;margin:7px 0;color:var(--muted)}
+.finder-handoff .handoff-summary{margin:12px 0;padding:12px;background:var(--white);border:1px solid var(--line)}
+.finder-handoff details>summary{cursor:pointer;font-weight:600;font-size:13.5px}
+.finder-handoff pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/2 var(--font);margin:10px 0 0;color:var(--ink)}
+.finder-handoff .handoff-controls{display:grid;grid-template-columns:minmax(0,1fr) 150px auto;gap:10px;align-items:end;margin-top:14px}
+.finder-handoff label{display:flex;flex-direction:column;gap:6px;font-size:12.5px;color:var(--muted)}
+.finder-handoff select,.finder-handoff input{min-width:0;width:100%;min-height:46px;padding:9px 11px;border:1px solid var(--line);background:var(--white);color:var(--ink);font:14px var(--font)}
+.finder-handoff .handoff-message{min-height:1.5em;color:#8a5b20;font-size:12.5px}
+.finder-handoff .handoff-ok{border-inline-start:3px solid #6b9d70;padding:12px;background:var(--white)}
+.finder-handoff a{color:var(--green);text-decoration:underline}
+.finder-handoff :focus-visible{outline:3px solid #477fc3;outline-offset:3px}
+@media(max-width:760px){.finder-handoff .handoff-controls{grid-template-columns:1fr}.finder-handoff .handoff-controls .btn{width:100%;min-height:46px}}
+html[data-theme="dark"] .finder-handoff{background:var(--panel,#142522);color:var(--ink)}
+html[data-theme="dark"] .finder-handoff .handoff-summary,html[data-theme="dark"] .finder-handoff select,html[data-theme="dark"] .finder-handoff input,html[data-theme="dark"] .finder-handoff .handoff-ok{background:#152823;color:var(--ink)}
